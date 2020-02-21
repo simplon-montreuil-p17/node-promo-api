@@ -1,12 +1,8 @@
 const express = require("express");
 const router = require("./routes");
 
-const PORT = 8080;
+const server = express();
 
-const app = express();
+server.use(router);
 
-app.use(router);
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}.`);
-});
+module.exports = server;

@@ -5,7 +5,7 @@ const validators = require('../validators/promos');
 
 router.get("/", async (request, response) => {
   const data = await promosController.getAllPromo();
-  response.status(200).json({ data });
+  response.status(200).json(data);
 });
 
 router.get("/:id", async (request, response) => {
